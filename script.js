@@ -31,9 +31,9 @@ var temp = new Two.Vector();
 var transitionFunction = [];
 
 var handlePositions = [
-    new Two.Vector(TRANSITION_WIDTH / 4, (TRANSITION_HEIGHT * 5) / 8),
+    new Two.Vector(TRANSITION_WIDTH / 4, Y_MAX_HANDLE),
     new Two.Vector(TRANSITION_WIDTH / 2, TRANSITION_HEIGHT / 2),
-    new Two.Vector((TRANSITION_WIDTH * 3) / 4, (TRANSITION_HEIGHT * 3) / 8),
+    new Two.Vector((TRANSITION_WIDTH * 3) / 4, Y_MIN_HANDLE),
 ];
 
 var initialVertices = [

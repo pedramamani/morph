@@ -9,7 +9,7 @@
 .panel {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 48px;
     padding: 24px;
     background-color: #2f2c30;
 }
@@ -20,10 +20,15 @@
     background-color: #1c1b1e;
 }
 
-.title {
+.title,
+.transitionTitle {
     font-weight: 400;
-    color: #d0c9d5;
-    padding-bottom: 18px;
+    color: #ded7e4;
+    white-space: nowrap;
+}
+
+.transitionTitle {
+    padding-bottom: 12px;
 }
 
 .transition {
@@ -31,195 +36,305 @@
     height: 125px;
 }
 
+.button {
+    padding: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.button:hover {
+    background-color: #cfbcff36;
+}
+
+.replay:active {
+    background-color: #cfbcff5f;
+  }
+
+.svg {
+    width: 100%;
+    height: 100%;
+    fill: #cfbcff;
+}
+
+.buttons {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 28px;
+}
+
+.slider {
+    height: 1px;
+    background-color: #cfbcff;
+}
+
+.knob {
+    position: relative;
+    top: -12px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #cfbcff;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+}
+
+.expander {
+    flex-grow: 1;
+}
+
+.dropDown {
+    color: #ded7e4;
+    background-color: #2f2c30;
+    outline: 0px;
+    border: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #ded7e4;
+    flex-grow: 1;
+}
 
 /* default styles */
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
-  }
-  
-  html {
+}
+
+html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     user-select: none;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     line-height: inherit;
-  }
-  
-  hr {
+}
+
+hr {
     height: 0;
     color: inherit;
     border-top-width: 1px;
-  }
-  
-  abbr:where([title]) {
+}
+
+abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
-  }
-  
-  a {
+}
+
+a {
     color: inherit;
     text-decoration: inherit;
-  }
-  
-  b, strong {
+}
+
+b,
+strong {
     font-weight: bolder;
-  }
-  
-  code, kbd, samp, pre {
+}
+
+code,
+kbd,
+samp,
+pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 1em;
-  }
-  
-  small {
+}
+
+small {
     font-size: 80%;
-  }
-  
-  sub, sup {
+}
+
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-  }
-  
-  sub {
+}
+
+sub {
     bottom: -0.25em;
-  }
-  
-  sup {
+}
+
+sup {
     top: -0.5em;
-  }
-  
-  table {
+}
+
+table {
     text-indent: 0;
     border-color: inherit;
     border-collapse: collapse;
-  }
-  
-  button, input, optgroup, select, textarea {
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
     font-family: inherit;
     font-size: 100%;
     line-height: inherit;
     color: inherit;
     margin: 0;
     padding: 0;
-  }
-  
-  button, select {
+}
+
+button,
+select {
     text-transform: none;
-  }
-  
-  button, [type="button"], [type="reset"], [type="submit"] {
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button;
     background-color: transparent;
     background-image: none;
-  }
-  
-  :-moz-focusring {
+}
+
+:-moz-focusring {
     outline: auto;
-  }
-  
-  :-moz-ui-invalid {
+}
+
+:-moz-ui-invalid {
     box-shadow: none;
-  }
-  
-  progress {
+}
+
+progress {
     vertical-align: baseline;
-  }
-  
-  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
     height: auto;
-  }
-  
-  [type="search"] {
+}
+
+[type="search"] {
     -webkit-appearance: textfield;
     outline-offset: -2px;
-  }
-  
-  ::-webkit-search-decoration {
+}
+
+::-webkit-search-decoration {
     -webkit-appearance: none;
-  }
-  
-  ::-webkit-file-upload-button {
+}
+
+::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit;
-  }
-  
-  summary {
+}
+
+summary {
     display: list-item;
-  }
-  
-  blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
     margin: 0;
-  }
-  
-  fieldset {
+}
+
+fieldset {
     margin: 0;
     padding: 0;
-  }
-  
-  legend {
+}
+
+legend {
     padding: 0;
-  }
-  
-  ol, ul, menu {
+}
+
+ol,
+ul,
+menu {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  input::-moz-placeholder, textarea::-moz-placeholder {
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
     opacity: 1;
     color: #9ca3af;
-  }
-  
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
     opacity: 1;
     color: #9ca3af;
-  }
-  
-  input::placeholder, textarea::placeholder {
+}
+
+input::placeholder,
+textarea::placeholder {
     opacity: 1;
     color: #9ca3af;
-  }
-  
-  button, [role="button"] {
+}
+
+button,
+[role="button"] {
     cursor: pointer;
-  }
-  
-  :disabled {
+}
+
+:disabled {
     cursor: default;
-  }
-  
-  img, svg, video, canvas, audio, iframe, embed, object {
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
     display: block;
     vertical-align: middle;
-  }
-  
-  img, video {
+}
+
+img,
+video {
     max-width: 100%;
     height: auto;
-  }
-  
-  [hidden] {
+}
+
+[hidden] {
     display: none;
-  }
+}
